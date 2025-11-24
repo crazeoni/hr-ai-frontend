@@ -66,9 +66,10 @@
 
 // At the top of your component
 "use client";
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 import { useState } from "react";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://hr-ai-frontend-drab.vercel.app";
 
 export default function Home() {
   const [question, setQuestion] = useState("");
@@ -208,7 +209,7 @@ export default function Home() {
         <footer className="mt-8 text-xs text-slate-400">
           Ready for Vercel / Bolt deployment.
           <br />
-          Set NEXT_PUBLIC_API_URL for remote backend.
+          Backend: {API_URL}
         </footer>
       </div>
     </main>
